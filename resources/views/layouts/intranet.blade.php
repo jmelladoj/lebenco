@@ -9,10 +9,10 @@
 
     <title>LebenCo. - @yield('title', 'Intranet')</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public_index/img/favicon.png') }}">
-    <link rel="icon" href="{{ asset('public_index/img/favicon.png') }}" type="image/x-icon">
-    <link rel="icon" type="image/png" href="{{ asset('public_index/img/favicon.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('public_index/img/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/' . $pagina->icon_url) }}">
+    <link rel="icon" href="{{ asset('storage/' . $pagina->icon_url) }}" type="image/x-icon">
+    <link rel="icon" type="image/png" href="{{ asset('storage/' . $pagina->icon_url) }}">
+    <link rel="apple-touch-icon" href="{{ asset('storage/' . $pagina->icon_url) }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">

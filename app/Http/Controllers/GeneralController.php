@@ -22,7 +22,11 @@ class GeneralController extends Controller
             'footer' => 'file',
             'comunidad_pyme_uno' => 'nullable|min:3',
             'comunidad_pyme_dos' => 'nullable|min:3',
-            'servicios' => 'nullable|min:3'
+            'servicios' => 'nullable|min:3',
+            'terminos' => 'file',
+            'privacidad' => 'file',
+            'satisfaccion' => 'file',
+            'derecho' => 'file'
         ];
 
         $this->validate($request, $rules);
@@ -30,21 +34,38 @@ class GeneralController extends Controller
         $pagina = General::findOrFail(1);
 
         if($request->hasFile('logo')){
-            Storage::put('public/pagina', $request->file('logo'));
-            $url = Storage::put('public/pagina', $request->file('file'));
-            $pagina->url_logo = $url;
+            $url =  Storage::disk('local')->put('public/pagina', $request->file('logo'));
+            $pagina->logo_url = substr($url, 7);
         }
 
         if($request->hasFile('favicon')){
-            Storage::put('public/pagina', $request->file('favicon'));
-            $url = Storage::put('public/pagina', $request->file('file'));
-            $pagina->icon_url = $url;
+            $url =  Storage::disk('local')->put('public/pagina', $request->file('favicon'));
+            $pagina->icon_url = substr($url, 7);
         }
 
         if($request->hasFile('footer')){
-            Storage::put('public/pagina', $request->file('footer'));
-            $url = Storage::put('public/pagina', $request->file('file'));
-            $pagina->logo_fot_url = $url;
+            $url =  Storage::disk('local')->put('public/pagina', $request->file('footer'));
+            $pagina->logo_fot_url = substr($url, 7);
+        }
+
+        if($request->hasFile('terminos')){
+            $url =  Storage::disk('local')->put('public/pagina', $request->file('terminos'));
+            $pagina->terminos_url = substr($url, 7);
+        }
+
+        if($request->hasFile('privacidad')){
+            $url =  Storage::disk('local')->put('public/pagina', $request->file('privacidad'));
+            $pagina->privacidad_url = substr($url, 7);
+        }
+
+        if($request->hasFile('satisfaccion')){
+            $url =  Storage::disk('local')->put('public/pagina', $request->file('satisfaccion'));
+            $pagina->satisfaccion_url = substr($url, 7);
+        }
+
+        if($request->hasFile('derecho')){
+            $url =  Storage::disk('local')->put('public/pagina', $request->file('derecho'));
+            $pagina->derecho_url = substr($url, 7);
         }
 
         $pagina->save();

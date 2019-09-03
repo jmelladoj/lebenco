@@ -11,10 +11,10 @@
 
     <!-- Fonts -->
     <!-- Favicone Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public_index/img/favicon.png') }}">
-    <link rel="icon" href="{{ asset('public_index/img/favicon.png') }}" type="image/x-icon">
-    <link rel="icon" type="image/png" href="{{ asset('public_index/img/favicon.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('public_index/img/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/' . $pagina->icon_url) }}">
+    <link rel="icon" href="{{ asset('storage/' . $pagina->icon_url) }}" type="image/x-icon">
+    <link rel="icon" type="image/png" href="{{ asset('storage/' . $pagina->icon_url) }}">
+    <link rel="apple-touch-icon" href="{{ asset('storage/' . $pagina->icon_url)  }}">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
@@ -33,8 +33,7 @@
                         <!--Logo-->
                         <div class="site-logo">
                             <a href="{{ url('/') }}">
-                                <img src="{{ asset('public_index/img/logoLC.png') }}" class="logo-dark" alt="LebenCO" />
-                                <img src="{{ asset('public_index/img/logoLC.png') }}" class="logo-light" alt="LebenCO" />
+                                <img src="{{ asset('storage/' . $pagina->logo_url) }}" class="logo-dark"  alt="LebenCo.">
                             </a>
                         </div>
                         <!--End Logo-->
@@ -221,7 +220,7 @@
                     <div class="row text-dark">
                         <div class="col-md-4">
                             <div class="col-sm-12 col-md-12 col-lg-12 mb-lg-0 mb-4 text-center">
-                                <img src="{{ asset('public_index/img/logo-footer.png') }}" class="footer-logo mb-4" alt="LebenCO" />
+                                <img src="{{ asset('storage/' . $pagina->logo_fot_url) }}" class="footer-logo mb-4" alt="LebenCO" />
                             </div>
                         </div>
                         <div class="col-md-4">

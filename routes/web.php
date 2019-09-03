@@ -166,7 +166,7 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/informeUsuarios', 'ReportController@informeUsuariosRango');
 
     Route::get('/paginaDatos', 'GeneralController@index');
-    Route::post('/pagina/editar', 'GeneralController@logo');
+    Route::post('/paginaDatos', 'GeneralController@logo');
 
     Route::get('/servicios', 'ServiceController@index'); 
     Route::get('/servicios/crear', 'ServiceController@create');

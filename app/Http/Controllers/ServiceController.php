@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Service;
 use DataTables;
+use Illuminate\Support\Facades\Storage;
 
 class ServiceController extends Controller
 {
@@ -41,17 +42,22 @@ class ServiceController extends Controller
         //
         $rules = [
             'titulo' => 'required|min:3|max:199',
-            'clase' => 'required|min:3|max:199',
+            'imagen' => 'file',
             'descripcion' => 'required|min:3|max:199'
         ];
 
         $this->validate($request, $rules);
 
-        $servicio = new Service();
-        $servicio->titulo = $request->input('titulo');
-        $servicio->clase = $request->input('clase');
-        $servicio->descripcion = $request->input('descripcion');
-        $servicio->save(); 
+        if($request->hasFile('imagen')){
+            $servicio = new Service();
+            $servicio->titulo = $request->input('titulo');
+
+            $url =  Storage::disk('local')->put('public/servicios', $request->file('imagen'));
+            $servicio->clase = substr($url, 7);
+
+            $servicio->descripcion = $request->input('descripcion');
+            $servicio->save(); 
+        }
 
         return redirect('/servicios')->with('status', 'Servicio agregado exitosamente'); 
     }

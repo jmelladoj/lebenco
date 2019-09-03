@@ -18,6 +18,10 @@ class CreateGeneralsTable extends Migration
             $table->string('logo_url')->nullable()->default(null);
             $table->string('icon_url')->nullable()->default(null);
             $table->string('logo_fot_url')->nullable()->default(null);
+            $table->string('terminos_url')->nullable()->default(null);
+            $table->string('privacidad_url')->nullable()->default(null);
+            $table->string('satisfaccion_url')->nullable()->default(null);
+            $table->string('derecho_url')->nullable()->default(null);
             $table->timestamps();
         });
     }

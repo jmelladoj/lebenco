@@ -17,13 +17,14 @@
                         <div class="form-body">
                             <div class="form-group m-t-40 row">
                                 <label for="titulo" class="col-2 col-form-label">Servicio *</label>
-                                <div class="col-4">
+                                <div class="col-10">
                                     <input type="text" id="titulo" name="titulo" class="form-control" required="" value="{{ old('titulo') }}">
                                 </div>
-
-                                <label for="clase" class="col-2 col-form-label">Clase *</label>
-                                <div class="col-4">
-                                    <input type="text" id="clase" name="clase" class="form-control" value="{{ old('clase') }}" /> 
+                            </div>
+                            <div class="form-group m-t-40 row">
+                                <label class="col-2 control-label">Imagen *</label>
+                                <div class="col-10">
+                                    <input type="file" id="imagen" name="imagen" class="dropify" data-allowed-file-extensions="png" data-min-height="50" data-min-width="50"/>
                                 </div>
                             </div>
 
@@ -47,4 +48,26 @@
     </div>
 @endsection
 
+
+@section('script')
+    <script>
+    $(document).ready(function() {
+        // Basic
+        $('.dropify').dropify({
+            messages: {
+                'default': 'Arrastra y suelta un archivo aquí o haz clic. <br> Recomendado: 155px de ancho por 95px de alto <br> sólo PNG y como máximo 1MB',
+                'replace': 'Arrastra y suelta o haz clic para reemplazar',
+                'remove':  'Borrar',
+                'error':   'Ooops, ha ocurrido un error.'
+            },
+            error: {
+                'fileSize': 'El tamaño del archivo es demasiado grande. 1MB max).',
+                'fileExtension': 'Formato no permitido, sólo PNG.',
+                'minWidth': 'El ancho de la imagen es demasiado pequeño. 1000px mínimo).',
+                'minHeight': 'El alto de la imagen es demasiado pequeño. 600px mínimo).'
+            }
+        });
+    });
+    </script>
+@endsection
 

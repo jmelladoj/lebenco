@@ -12,7 +12,7 @@
                     <h4 class="m-b-0 text-white">Editar Cosas Generales Página</h4>
                 </div>
                 <div class="card-body">
-                    <form class="form" method="post" action="{{ url('/pagina/editar') }}" accept-charset="UTF-8" enctype="multipart/form-data">
+                    <form class="form" method="post" action="{{ url('/paginaDatos') }}" accept-charset="UTF-8" enctype="multipart/form-data">
                         @csrf
                         <div class="form-body">
                             <div class="form-group m-t-40 row">
@@ -54,26 +54,26 @@
                             <div class="form-group m-t-40 row">
                                 <label id="clasificacion" class="col-2 control-label">Terminos y condiciones *</label>
                                 <div class="col-10">
-                                    <input type="file" id="logo" name="logo" class="dropify" data-allowed-file-extensions="pdf" data-min-height="50" data-min-width="50"/>
+                                    <input type="file" id="terminos" name="terminos" class="dropify" data-allowed-file-extensions="pdf" data-min-height="50" data-min-width="50"/>
                                 </div>
                             </div>
                             <div class="form-group m-t-40 row">
                                 <label id="clasificacion" class="col-2 control-label">Políticas de privacidad *</label>
                                 <div class="col-10">
-                                    <input type="file" id="logo" name="logo" class="dropify" data-allowed-file-extensions="pdf" data-min-height="50" data-min-width="50"/>
+                                    <input type="file" id="privacidad" name="privacidad" class="dropify" data-allowed-file-extensions="pdf" data-min-height="50" data-min-width="50"/>
                                 </div>
                             </div>
                             <div class="form-group m-t-40 row">
                                 <label id="clasificacion" class="col-2 control-label">Políticas de satisfacción *</label>
                                 <div class="col-10">
-                                    <input type="file" id="logo" name="logo" class="dropify" data-allowed-file-extensions="pdf" data-min-height="50" data-min-width="50"/>
+                                    <input type="file" id="satisfaccion" name="satisfaccion" class="dropify" data-allowed-file-extensions="pdf" data-min-height="50" data-min-width="50"/>
                                 </div>
                             </div>
 
                             <div class="form-group m-t-40 row">
                                 <label id="clasificacion" class="col-2 control-label">Políticas de derecho de autor *</label>
                                 <div class="col-10">
-                                    <input type="file" id="logo" name="logo" class="dropify" data-allowed-file-extensions="pdf" data-min-height="50" data-min-width="50"/>
+                                    <input type="file" id="derecho" name="derecho" class="dropify" data-allowed-file-extensions="pdf" data-min-height="50" data-min-width="50"/>
                                 </div>
                             </div>
                         </div>
