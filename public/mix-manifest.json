@@ -1,0 +1,9 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/public_index/css/estilos_home.css": "/public_index/css/estilos_home.css",
+    "/public_index/js/plugins_home.js": "/public_index/js/plugins_home.js",
+    "/public_intranet/css/estilos_intranet.css": "/public_intranet/css/estilos_intranet.css",
+    "/public_intranet/js/plugins_intranet.js": "/public_intranet/js/plugins_intranet.js",
+    "/js/plugins_general.js": "/js/plugins_general.js"
+}
