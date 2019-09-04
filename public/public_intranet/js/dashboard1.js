@@ -91,12 +91,12 @@ $(function () {
         }
         , pointSize: 3
         , fillOpacity: 0
-        , pointStrokeColors: ['#00bfc7', '#fb9678', '#9675ce']
+        , pointStrokeColors: ['#8AB733', '#E8ECD1', '#3F8A24']
         , behaveLikeLine: true
         , gridLineColor: '#e0e0e0'
         , lineWidth: 3
         , hideHover: 'auto'
-        , lineColors: ['#00bfc7', '#fb9678', '#9675ce']
+        , lineColors: ['#8AB733', '#E8ECD1', '#3F8A24']
         , resize: true
     });
 

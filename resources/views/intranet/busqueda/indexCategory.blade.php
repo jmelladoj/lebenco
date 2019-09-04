@@ -21,7 +21,7 @@
                                 <tr align="center">
                                     <th>TÍTULO</th>
                                     <th>AUTOR</th>
-                                    <th>VALOR</th>
+                                    <th>PRECIO</th>
                                     <th>ACCIONES</th>
                                 </tr>
                             </thead>

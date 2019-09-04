@@ -77,7 +77,7 @@
                                     <div class="nav-icon-trigger menu-mobile-btn" title="Menú de navegación"><span><i class="ti-menu"></i></span></div>
                                 </li>
                                 <li class="nav-icon-item">
-                                    <div class="nav-icon-trigger dropdown--trigger" title="Ingreso de usuario"><span><a href="{{ url('/login') }}" class="{{ (request()->is('login')) ? 'sale-color' : '' }} ">@if(Auth::check()) <font style="font-size: 20px;"> {{ Auth::user()->nombre }} </font> @else <i class="ti-user"></i> <font style="font-size: 17px;"> Ingresa </font> @endif</a></span></div>
+                                    <div class="nav-icon-trigger dropdown--trigger" title="Ingreso de usuario"><span><a href="{{ url('/login') }}" class="{{ (request()->is('login')) ? 'sale-color' : '' }} ">@if(Auth::check()) <font style="font-size: 17px;"> {{ Auth::user()->nombre }} </font> @else <i class="ti-user"></i> <font style="font-size: 17px;"> Ingresa </font> @endif</a></span></div>
                                 </li> 
                             </ul>
                         </div>

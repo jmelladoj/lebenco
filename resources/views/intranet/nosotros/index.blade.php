@@ -17,9 +17,9 @@
                             </div>
                         </div>
                         <div class="form-group m-t-40 row">
-                            <label for="video" class="col-2 col-form-label">URL Video</label>
+                            <label class="col-2 control-label">Video *</label>
                             <div class="col-10">
-                                <input type="text" id="video" name="video" class="form-control" required="" value="{{ old('URL Video', $page->video) }}">
+                                <input type="file" name="video" id="video" class="dropify"  data-allowed-file-extensions="mp4"/>
                             </div>
                         </div>
                         <div class="form-actions">
@@ -42,8 +42,21 @@
 
             CKEDITOR.config.extraPlugins = 'justify';
 
+            $('.dropify').dropify({
+                messages: {
+                    'default': 'Arrastra y suelta un archivo aquí o haz clic. Sólo vídeos.',
+                    'replace': 'Arrastra y suelta o haz clic para reemplazar',
+                    'remove':  'Borrar',
+                    'error':   'Ooops, ha ocurrido un error.'
+                },
+                error: {
+                    'fileSize': 'El tamaño del archivo es demasiado grande. 100MB max).',
+                    'fileExtension': 'Formato no permitido, sólo Vídeo.'
+                }
+            });
 
         });
     </script>
 @endsection
+
 

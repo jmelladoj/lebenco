@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pages;
+use Illuminate\Support\Facades\Storage;
 
 class PageUsController extends Controller
 {
@@ -73,20 +74,20 @@ class PageUsController extends Controller
     {
         //
         $rules = [
-            'html' => 'required|min:3'
+            'html' => 'required|min:3',
+            'video' => 'nullable|file'
         ];
 
         $this->validate($request, $rules);
 
         $page = Pages::findOrFail(1);
         $page->contenido = $request->input('html');
-
-        if($request->input('video') != null){
-            $page->video = $request->input('video');
-        } else {
-            $page->video = null;
-        }
         
+        if($request->hasFile('video')){
+            $url =  Storage::disk('local')->put('public/general', $request->file('video'));
+            $page->video = substr($url, 7);
+        }
+
         $page->save(); 
 
         return redirect('/nosotros')->with('status', 'Página de nosotros actualizada correctamente'); 

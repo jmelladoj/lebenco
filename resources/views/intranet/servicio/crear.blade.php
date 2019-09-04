@@ -12,11 +12,11 @@
                     <h4 class="m-b-0 text-white">Añadir Servicios</h4>
                 </div>
                 <div class="card-body">
-                    <form class="form" method="post" action="{{ url('servicios') }}">
+                    <form class="form" method="post" action="{{ url('/servicios') }}" accept-charset="UTF-8" enctype="multipart/form-data">
                         @csrf
                         <div class="form-body">
                             <div class="form-group m-t-40 row">
-                                <label for="titulo" class="col-2 col-form-label">Servicio *</label>
+                                <label class="col-2 col-form-label">Servicio *</label>
                                 <div class="col-10">
                                     <input type="text" id="titulo" name="titulo" class="form-control" required="" value="{{ old('titulo') }}">
                                 </div>
@@ -24,12 +24,11 @@
                             <div class="form-group m-t-40 row">
                                 <label class="col-2 control-label">Imagen *</label>
                                 <div class="col-10">
-                                    <input type="file" id="imagen" name="imagen" class="dropify" data-allowed-file-extensions="png" data-min-height="50" data-min-width="50"/>
+                                    <input type="file" name="imagen" id="imagen" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="jpg png jpeg" data-min-height="50" data-min-width="50"/>
                                 </div>
                             </div>
-
                             <div class="form-group m-t-40 row">
-                                <label id="descripcion" class="col-2 control-label">Descripción *</label>
+                                <label class="col-2 control-label">Descripción *</label>
                                 <div class="col-10">
                                     <textarea name="descripcion" id="descripcion" cols="30" rows="5" class="form-control"></textarea>
                                 </div>

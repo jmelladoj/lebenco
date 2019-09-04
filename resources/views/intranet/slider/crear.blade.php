@@ -35,7 +35,7 @@
                                         <option value="2" {{ old('ubicacion') == 2 ? 'selected' : '' }}>DESCANSO 1</option>
                                         <option value="3" {{ old('ubicacion') == 3 ? 'selected' : '' }}>DESCANSO 2</option>
                                         <option value="4" {{ old('ubicacion') == 4 ? 'selected' : '' }}>PÁGINA NOSOTROS</option>
-                                        <option value="5" {{ old('ubicacion') == 5 ? 'selected' : '' }}>PÁGINA CONTÁCTO<option>
+                                        <option value="5" {{ old('ubicacion') == 5 ? 'selected' : '' }}>PÁGINA CONTÁCTO</option>
                                         <option value="6" {{ old('ubicacion') == 6 ? 'selected' : '' }}>PÁGINA COMUNIDAD PYME</option>
                                         <option value="7" {{ old('ubicacion') == 7 ? 'selected' : '' }}>PÁGINA SERVICIOS</option>
                                     </select>
@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="form-group m-t-40 row">
-                                <label id="clasificacion" class="col-2 control-label">Imagen *</label>
+                                <label class="col-2 control-label">Imagen *</label>
                                 <div class="col-10">
                                     <input type="file" id="imagen" name="imagen" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="jpg png jpeg" data-min-height="600" data-min-width="1000"/>
                                 </div>
@@ -75,7 +75,7 @@
         // Basic
         $('.dropify').dropify({
             messages: {
-                'default': 'Arrastra y suelta un archivo aquí o haz clic. <br> Recomendado: 1920px de ancho por 1280px de alto <br> sólo JPG, PNG O JPEG y como máximo 2MB',
+                'default': 'Arrastra y suelta una imagen aquí o cliquea para buscar en tu equipo portátil. <br> Recomendado: 1920px de ancho por 1280px de alto.<br> Formatos permitidos: JPG, JPEG y PNG, con tamaño máximo 2MB',
                 'replace': 'Arrastra y suelta o haz clic para reemplazar',
                 'remove':  'Borrar',
                 'error':   'Ooops, ha ocurrido un error.'

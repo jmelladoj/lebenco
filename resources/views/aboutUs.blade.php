@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe width="auto" height="auto" src="{{ $contenido->video }}" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="auto" height="auto" src="{{ asset('storage/' . $contenido->video) }}" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>

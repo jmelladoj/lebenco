@@ -1,6 +1,6 @@
 @section('title', 'LEBENCO - Web')
 
-@section('seccion', 'Web')
+@section('seccion', 'Sliders')
 
 @extends('layouts.intranet')
 
@@ -14,7 +14,7 @@
                             <h4 class="card-title">Sliders</h4>
                         </div>
                         <div class="col-lg-6">
-                            <a href="{{ url('sliders/crear') }}" class="btn btn-btn btn-success pull-right" data-toggle="tooltip" title="Subir imagenes">Añadir</a>
+                            <a href="{{ url('sliders/crear') }}" class="btn btn-btn btn-success pull-right" data-toggle="tooltip" title="Crear Slider">Crear</a>
                         </div>
                     </div>
                     <div class="table-responsive m-t-40">

@@ -70,8 +70,12 @@
                                 <li class="nav-item">
                                     <form class="app-search d-none d-md-block d-lg-block" method="post" action="{{ url('busqueda') }}">
                                         @csrf
-                                        <input type="text" class="form-control" id="busqueda" name="busqueda" placeholder="Escribe lo que buscas">
+                                        <input type="text" class="form-control" id="busqueda" name="busqueda" placeholder="Búsqueda de contenido">
                                     </form>
+                                </li>
+                                <li class="nav-item"> 
+                                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="{{ url('/home') }}" aria-expanded="false"><i class="fa fa-home"></i><span class="hide-menu"> Escritorio</span>
+                                    </a>
                                 </li>
                             </ul>
                             <!-- ============================================================== -->
@@ -81,11 +85,6 @@
                                 <!-- ============================================================== -->
                                 <!-- Comment -->
                                 <!-- ============================================================== -->
-
-                                <li class="nav-item"> 
-                                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="{{ url('/home') }}" aria-expanded="false"><i class="fa fa-home"></i><span class="hide-menu"> Escritorio</span>
-                                    </a>
-                                </li>
                                 <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><img src="{{ asset('img/salir.png') }}" height="40px" width="40px"><form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form></a></li>
                             </ul>
                         </div>
@@ -123,7 +122,7 @@
                                     <li> <a class="waves-effect waves-dark" onclick="compartir();"  href="#" aria-expanded="false"><i class="fa fa-share-alt"></i><span class="hide-menu"> RECOMENDAR</span></a></li>
                                     <li> <a class="waves-effect waves-dark" onclick="solicitarDocumento();"  href="#" aria-expanded="false"><i class="fa fa-search"></i><span class="hide-menu"> PIDE DOCUMENTO</span></a></li>
                                 @endif
-                                <li class="nav-small-cap">--- BUSCAR DOCUMENTOS</li>
+                                {{--<li class="nav-small-cap">--- BUSCAR DOCUMENTOS</li>
                                 <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fa fa-file-text" aria-hidden="true"></i>
                                     <span class="hide-menu">CATEGORÍAS: </span></a>
                                     <ul aria-expanded="false" class="collapse">
@@ -138,10 +137,9 @@
                                         <li><a href="{{ url('/busqueda/3') }}"><span><i class="fa fa-star" aria-hidden="true"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-star" aria-hidden="true"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-star" aria-hidden="true"></i></span></a></li>
                                         <li><a href="{{ url('/busqueda/2') }}"><span><i class="fa fa-star" aria-hidden="true"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-star" aria-hidden="true"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-star-o" aria-hidden="true"></i></span></a></li>
                                         <li><a href="{{ url('/busqueda/1') }}"><span><i class="fa fa-star" aria-hidden="true"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-star-o" aria-hidden="true"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-star-o" aria-hidden="true"></i></span></a></li>
-                                    </ul></li>
+                                    </ul></li>--}}
 
                                 <li class="nav-small-cap">--- MENÚ</li>
-                                <li> <a class="waves-effect waves-dark" href="{{ url('/home') }}" aria-expanded="false"><i class="fa fa-home"></i><span class="hide-menu">ESCRITORIO</span></a></li>
                                 @if(Auth::user()->tipo_usuario == 3)<li> <a class="waves-effect waves-dark" href="{{ url('/recargar') }}" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">RECARGAR</span></a></li>@endif
                                 @if(Auth::user()->tipo_usuario == 3)<li> <a class="waves-effect waves-dark" href="{{ url('/documento/subir') }}" aria-expanded="false"><i class="fa fa-cloud-upload"></i><span class="hide-menu">SUBIR DOCUMENTO</span></a></li>@endif
                                 @if(Auth::user()->tipo_usuario == 3)<li> <a class="waves-effect waves-dark" href="{{ url('/rifasActivas') }}" aria-expanded="false"><i class="fa fa-list-ol"></i><span class="hide-menu">RIFAS</span></a></li>@endif
@@ -186,7 +184,6 @@
                                     </ul>
                                 </li>
                                 @endif
-                                <li> <a class="waves-effect waves-dark" href="{{ route('logout') }}" aria-expanded="false" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><center><span class="hide-menu"><img src="{{ asset('img/salir.png') }}" height="50px" width="50px"></span></center> </a><form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form></li>
                             </ul>
                         </nav>
                     </div>
@@ -259,7 +256,7 @@
                     </div>
                 </div>
                 <footer class="footer">
-                    © 2018 LEBENCO Online. Todos los derechos reservados.
+                    © 2018 Prevención LebenCo. IS Online. Todos los derechos reservados.
                 </footer>
             </div>
     </div>

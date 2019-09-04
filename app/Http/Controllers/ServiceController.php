@@ -42,7 +42,7 @@ class ServiceController extends Controller
         //
         $rules = [
             'titulo' => 'required|min:3|max:199',
-            'imagen' => 'file',
+            'imagen' => 'required|file',
             'descripcion' => 'required|min:3|max:199'
         ];
 

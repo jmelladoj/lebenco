@@ -62,7 +62,7 @@ class SliderController extends Controller
         $slider->lugar = $request->input('ubicacion');
         $slider->save(); 
 
-        return redirect('/sliders')->with('status', 'Slider agregado exitosamente'); 
+        return redirect('/sliders')->with('status', 'Slider creado exitosamente.'); 
     }
 
     /**

@@ -21,7 +21,7 @@
                                 <tr align="center">
                                     <th>TÍTULO</th>
                                     <th>AUTOR</th>
-                                    <th>VALOR</th>
+                                    <th>PRECIO</th>
                                     <th>ACCIONES</th>
                                 </tr>
                             </thead>
@@ -53,12 +53,16 @@
                 serverSide: true,
                 stateSave: true,
                 language: {
-                  "search":"Buscar",
+                "search":"Buscar",
                   "lengthMenu": "Mostar _MENU_ registros por página",
-                  "zeroRecords": "Lo sentimos, no encontramos lo que estas buscando",
+                  "zeroRecords": "Lo sentimos, no hay coincidencias. Prueba con la herramienta Documentos a pedido.",
                   "info": "Mostrando página _PAGE_ de _PAGES_",
                   "infoEmpty": "Registros no encontrados",
-                  "infoFiltered": "(Filtrado en _MAX_ registros totales)"
+                  "infoFiltered": "(Filtrado en _MAX_ registros totales)",
+                  paginate: {
+                      "next" : "Siguiente",
+                      "previous" : "Anterior"
+                  }
                 },
                 ajax: {
                     url : '{{ url('busquedaPorPalabra') }}',

@@ -45,9 +45,7 @@
                                                 {{ $item->descripcion }}
                                             </p>
                                         </div>
-                                        <p class="info text-center" style="font-size: 80px">
-                                            {!! $item->clase !!}
-                                        </p>
+                                        <img src="{{ asset('storage/' . $item->clase) }}" class="img-fluid" />
                                     </div>
                                 </div>
                                 <!--End Blog Item-->

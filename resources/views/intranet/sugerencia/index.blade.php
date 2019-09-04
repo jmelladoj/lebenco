@@ -1,6 +1,6 @@
 @section('title', 'LEBENCO - Sugerencias')
 
-@section('seccion', 'Sugerencias')
+@section('seccion', 'Sugerencia')
 
 @extends('layouts.intranet')
 
@@ -12,11 +12,11 @@
                     <div class="row">         
                         @if(Auth::user()->tipo_usuario != 3)
                             <div class="col-lg-12">
-                                <h4 class="card-title">Sugerencias</h4>
+                                <h4 class="card-title">Sugerencia</h4>
                             </div>
                         @else
                             <div class="col-lg-6">
-                                <h4 class="card-title">Sugerencias</h4>
+                                <h4 class="card-title">Sugerencia</h4>
                             </div>
                             <div class="col-lg-6">
                                 <a href="{{ url('sugerencias/crear') }}" class="btn btn-btn btn-success pull-right" data-toggle="tooltip" title="Añadir una sugerencia">Añadir</a>

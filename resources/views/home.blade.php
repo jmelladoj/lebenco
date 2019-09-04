@@ -47,10 +47,10 @@
                             <div class="d-flex no-block align-items-center">
                                 <div>
                                     <h3><i class="fa fa-user"></i></h3>
-                                    <p class="text-muted">NUEVOS USUARIOS</p>
+                                    <p class="text-muted">Nuevos usuarios</p>
                                 </div>
                                 <div class="ml-auto">
-                                    <h2 class="counter text-primary">{{ Auth::user()->nuevosUsuariosPorSemana }}</h2>
+                                    <h2 class="counter text-success">{{ Auth::user()->nuevosUsuariosPorSemana }}</h2>
                                 </div>
                             </div>
                         </div>
@@ -66,10 +66,10 @@
                             <div class="d-flex no-block align-items-center">
                                 <div>
                                     <h3><i class="icon-note"></i></h3>
-                                    <p class="text-muted">DOCUMENTOS PENDIENTES</p>
+                                    <p class="text-muted">Documentos pendientes</p>
                                 </div>
                                 <div class="ml-auto">
-                                    <h2 class="counter text-cyan">{{  Auth::user()->documentosPendiente }}</h2>
+                                    <h2 class="counter text-success">{{  Auth::user()->documentosPendiente }}</h2>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                             <div class="d-flex no-block align-items-center">
                                 <div>
                                     <h3><i class="icon-doc"></i></h3>
-                                    <p class="text-muted">NUEVOS DOCUMENTOS</p>
+                                    <p class="text-muted">Nuevos documentos</p>
                                 </div>
                                 <div class="ml-auto">
                                     <h2 class="counter text-purple">{{  Auth::user()->documentosNuevos }}</h2>
@@ -104,7 +104,7 @@
                             <div class="d-flex no-block align-items-center">
                                 <div>
                                     <h3><i class="fa fa-money"></i></h3>
-                                    <p class="text-muted">NÚMERO DE RECARGAS</p>
+                                    <p class="text-muted">Número de recargas</p>
                                 </div>
                                 <div class="ml-auto">
                                     <h2 class="counter text-success">{{ number_format(Auth::user()->totalCantidadVentasSemana) }}</h2>
@@ -123,10 +123,10 @@
                             <div class="d-flex no-block align-items-center">
                                 <div>
                                     <h3><i class="fa fa-users"></i></h3>
-                                    <p class="text-muted">TOTAL SALDO USUARIOS</p>
+                                    <p class="text-muted">Total saldo usuarios</p>
                                 </div>
                                 <div class="ml-auto">
-                                    <h2 class="counter text-primary">${{ number_format(Auth::user()->totalSaldoSemana) }}</h2>
+                                    <h2 class="counter text-success">${{ number_format(Auth::user()->totalSaldoSemana) }}</h2>
                                 </div>
                             </div>
                         </div>
@@ -142,10 +142,10 @@
                             <div class="d-flex no-block align-items-center">
                                 <div>
                                     <h3><i class="fa fa-usd"></i></h3>
-                                    <p class="text-muted">TOTAL VENTAS</p>
+                                    <p class="text-muted">Total ventas</p>
                                 </div>
                                 <div class="ml-auto">
-                                    <h2 class="counter text-cyan">${{ number_format(Auth::user()->totalVentasSemana) }}</h2>
+                                    <h2 class="counter text-success">${{ number_format(Auth::user()->totalVentasSemana) }}</h2>
                                 </div>
                             </div>
                         </div>
@@ -163,10 +163,10 @@
                             <div class="d-flex no-block align-items-center">
                                 <div>
                                     <h3><i class="fa fa-user"></i></h3>
-                                    <p class="text-muted">TOTAL SALDO USUARIOS</p>
+                                    <p class="text-muted">Total saldo usuarios</p>
                                 </div>
                                 <div class="ml-auto">
-                                    <h2 class="counter text-primary">${{ number_format(Auth::user()->totalSaldoSemana) }}</h2>
+                                    <h2 class="counter text-success">${{ number_format(Auth::user()->totalSaldoSemana) }}</h2>
                                 </div>
                             </div>
                         </div>
@@ -182,10 +182,10 @@
                             <div class="d-flex no-block align-items-center">
                                 <div>
                                     <h3><i class="fa fa-usd"></i></h3>
-                                    <p class="text-muted">TOTAL VENTAS</p>
+                                    <p class="text-muted">Total ventas</p>
                                 </div>
                                 <div class="ml-auto">
-                                    <h2 class="counter text-cyan">${{ number_format(Auth::user()->totalVentasSemana) }}</h2>
+                                    <h2 class="counter text-success">${{ number_format(Auth::user()->totalVentasSemana) }}</h2>
                                 </div>
                             </div>
                         </div>
@@ -201,7 +201,7 @@
                             <div class="d-flex no-block align-items-center">
                                 <div>
                                     <h3><i class="fa fa-money"></i></h3>
-                                    <p class="text-muted">NÚMERO DE RECARGAS</p>
+                                    <p class="text-muted">Número de recargas</p>
                                 </div>
                                 <div class="ml-auto">
                                     <h2 class="counter text-success">{{ number_format(Auth::user()->totalCantidadVentasSemana) }}</h2>
@@ -266,9 +266,9 @@
                             <h5 class="card-title ">RESUMEN SEMANAL</h5>
                             <div class="ml-auto">
                                 <ul class="list-inline font-12">
-                                    <li><i class="fa fa-circle text-cyan"></i> Recargas</li>
-                                    <li><i class="fa fa-circle text-primary"></i> Usuarios</li>
-                                    <li><i class="fa fa-circle text-purple"></i> Documentos</li>
+                                    <li><i class="fa fa-circle" style="color: #8AB733;"></i> Recargas</li>
+                                    <li><i class="fa fa-circle" style="color: #E8ECD1;"></i> Usuarios</li>
+                                    <li><i class="fa fa-circle" style="color: #3F8A24;"></i> Documentos</li>
                                 </ul>
                             </div>
                         </div>

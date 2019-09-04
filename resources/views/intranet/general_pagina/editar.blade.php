@@ -1,6 +1,6 @@
-@section('title', 'LEBENCO - Editar Página')
+@section('title', 'LEBENCO - Edición General')
 
-@section('seccion', 'Editar Página')
+@section('seccion', 'Edición General')
 
 @extends('layouts.intranet')
 
@@ -9,7 +9,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header bg-info">
-                    <h4 class="m-b-0 text-white">Editar Cosas Generales Página</h4>
+                    <h4 class="m-b-0 text-white">Edición General</h4>
                 </div>
                 <div class="card-body">
                     <form class="form" method="post" action="{{ url('/paginaDatos') }}" accept-charset="UTF-8" enctype="multipart/form-data">
@@ -79,7 +79,7 @@
                         </div>
                         <div class="form-actions">
                             <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Guardar</button>
-                            <a href="{{ url('/sliders') }}" type="button" class="btn btn-inverse">Cancelar</a>
+                            <a href="{{ url('/paginaDatos') }}" type="button" class="btn btn-inverse">Cancelar</a>
                         </div>
                     </form>
                 </div>
@@ -97,7 +97,7 @@
         // Basic
         $('.dropify').dropify({
             messages: {
-                'default': 'Arrastra y suelta un archivo aquí o haz clic. <br> Recomendado: 155px de ancho por 95px de alto <br> sólo PNG y como máximo 1MB',
+                'default': 'Arrastra y suelta una imagen aquí o cliquea para buscar en tu equipo portátil.  <br> Recomendado: 155px de ancho por 95px de alto <br> Formatos permitidos: PNG, con tamaño máximo 1MB',
                 'replace': 'Arrastra y suelta o haz clic para reemplazar',
                 'remove':  'Borrar',
                 'error':   'Ooops, ha ocurrido un error.'
