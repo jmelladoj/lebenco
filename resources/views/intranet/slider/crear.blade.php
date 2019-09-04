@@ -27,7 +27,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group m-t-40 row">
+                            <div class="form-group m-t-40 row"></div>
                                 <label for="color" class="col-2 col-form-label">Ubicación *</label>
                                 <div class="col-4">
                                     <select name="ubicacion" id="ubicacion" class="form-control">
